@@ -1,0 +1,44 @@
+openapi: 3.0.0
+
+info:
+  title: XXX API
+
+  version: 1.0.0
+
+  description: |-
+    本書は XXX API に関する仕様書です。
+
+tags:
+  - name:  XXXAPI
+    description: XXX
+
+paths:
+  /hoge:
+    post:
+      tags:
+        - hoge
+      summary: hoge
+      description: hoge
+      operationId: hoge
+      requestBody:
+        required: true
+        description: hoge
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                task_meta_info_id:
+                  type: string
+                  example: a9da66a4eb4849f3a15c795d69fddbf0
+                  description: IDです。
+                token:
+                  type: string
+                  example: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.xxx
+                  description: トークンです。
+      responses:
+        '200':
+          description: 正常に処理が完了した場合です。
+        '400':
+          description: バリデーションチェックによるエラーです。
+        '403':
